@@ -1,11 +1,20 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(biscoito, bolacha) {
+  let good = biscoito;
+  let awesome = bolacha;
+
+  if (good && awesome === true) {
+    return true;
+  }
+
+  return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+
+  return area;
 }
 
 // Desafio 3
