@@ -28,23 +28,35 @@ function splitSentence(phrase) {
 function concatName(array) {
   let last = array.pop();
   let first = array.shift();
-  let concat = last + "," + " " + first;
-
-  
+  let concat = last + ", " + first;
 
   return concat;
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + ties;
+
+  return points
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let count = 0;
+  let highest = numbers[0];
+
+  for (let index = 1; index < numbers.length; index += 1) {
+    if (numbers[index] > highest) {
+      highest = numbers[index];
+    }
+  }
+
+  for (let index2 in numbers)
+    if (numbers[index2] === highest) {
+      count += 1;
+    }
+
+  return count;
 }
 
 // Desafio 7
