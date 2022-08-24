@@ -19,7 +19,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  let arrayStrings = phrase.split(" ");
+  let arrayStrings = phrase.split(' ');
 
   return arrayStrings;
 }
@@ -28,7 +28,7 @@ function splitSentence(phrase) {
 function concatName(array) {
   let last = array.pop();
   let first = array.shift();
-  let concat = last + ", " + first;
+  let concat = last + ', ' + first;
 
   return concat;
 }
@@ -37,7 +37,7 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let points = (wins * 3) + ties;
 
-  return points
+  return points;
 }
 
 // Desafio 6
@@ -103,17 +103,77 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let arrayEncode = phrase.split('');
+  
+  let array = [];
+
+  for (let index in phrase) {
+    if (phrase[index] === "a") {
+      array.push("1");
+    } else if (phrase[index] === "e") {
+      array.push("2");
+    } else if (phrase[index] === "i") {
+      array.push("3");
+    } else if (phrase[index] === "o") {
+      array.push("4");
+    } else if (phrase[index] === "u") {
+      array.push("5");
+    } else {
+      array.push(phrase[index]);
+    }
+  }
+
+  let phraseEncode = array.join('');
+
+  return phraseEncode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  let arrayEncode = phrase.split('');
+  
+  let array = [];
+
+  for (let index in phrase) {
+    if (phrase[index] === "1") {
+      array.push("a");
+    } else if (phrase[index] === "2") {
+      array.push("e");
+    } else if (phrase[index] === "3") {
+      array.push("i");
+    } else if (phrase[index] === "4") {
+      array.push("o");
+    } else if (phrase[index] === "5") {
+      array.push("u");
+    } else {
+      array.push(phrase[index]);
+    }
+  }
+
+  let phraseEncode = array.join('');
+
+  return phraseEncode;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(technologies, person) {
+  
+  let tec = technologies.sort();
+  
+  let arrayTec = [];
+
+  if (technologies.length === 0) {
+    return "Vazio!";
+  } else {
+    for (let index in technologies) {
+      arrayTec.push(arrayTec[index] = {"name": person, "tech": technologies[index]});
+    }
+  
+    return arrayTec;
+  }
 }
+
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], "Lucas"));
 
 module.exports = {
   calcArea,
