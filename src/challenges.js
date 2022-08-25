@@ -158,22 +158,22 @@ function decode(phrase) {
 // Desafio 10
 function techList(technologies, person) {
   
-  let tec = technologies.sort();
+  technologies.sort();
   
-  let arrayTec = [];
+  let arrayTech = [];
 
   if (technologies.length === 0) {
     return "Vazio!";
-  } else {
-    for (let index in technologies) {
-      arrayTec.push(arrayTec[index] = {"name": person, "tech": technologies[index]});
-    }
-  
-    return arrayTec;
   }
-}
+  
+  for (let index in technologies) {
+      object = {"tech": technologies[index], "name": person, };
+      arrayTech.push(object);
+  }
+  
+  return arrayTech;
 
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], "Lucas"));
+}
 
 module.exports = {
   calcArea,

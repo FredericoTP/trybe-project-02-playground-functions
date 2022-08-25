@@ -1,6 +1,52 @@
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {  
+  let numbers1 = [];
+  let numbers2 = [];
+  let numbers3 = [];
+
+  for (let index in numbers) {
+    if (index <= 1) {
+      numbers1.push(numbers[index]);
+    } else if (index <= 6) {
+      numbers2.push(numbers[index]);
+    } else {
+      numbers3.push(numbers[index]);
+    }
+  }
+
+  phone = '(' + numbers1 + ') ' + numbers2 + '-' + numbers3
+  phone2 = phone.replaceAll(',', '');
+
+  let indice = 0;
+  let num = 0;
+  let count = 0;
+  let count2 = 0;
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    num = numbers[index];
+      for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+        if (numbers[index2] === num) {
+          count2 +=1;
+        }
+      }
+      if (count2 > count) {
+        count = count2;
+        indice = numbers[index];
+      }
+      count2 = 0;
+  }
+  
+  if (numbers.length < 11 || numbers.length > 11) {
+    return 'Array com tamanho incorreto.';
+  } 
+
+  for (let index3 in numbers) {
+    if (numbers[index3] > 9 || numbers[index3] < 0 || count >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  } 
+
+  return phone2;
 }
 
 // Desafio 12
