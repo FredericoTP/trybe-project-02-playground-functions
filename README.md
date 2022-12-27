@@ -1,5 +1,3 @@
-# :construction: README em construção ! :construction:
-
 # :computer: Trybe-02-Project-Playground-Functions :computer:
 
 Nesse projeto utilizei lógica de programação para ajudar na análise de cada problema e implementar o código de funções que resolvem problemas com respostas pré-determinadas.
@@ -338,3 +336,5 @@ Implemente a função `hydrate` que recebe uma string e retorna a sugestão de q
 ## 2- Nota do Projeto
 
 ## 100% :heavy_check_mark:
+
+![Project-Playground-Functions-Grade](https://github.com/FredericoTP/trybe-project-02-playground-functions/blob/main/image/2-playground-functions.png?raw=true)
